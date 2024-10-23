@@ -15,7 +15,6 @@ html {
 
 body {
   font-family: "Mulish", sans-serif;
-  cursor: url("cursor.png"), auto;
 }
 
 .text-google {
@@ -27,22 +26,4 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-.navbar {
-  animation: google-logo;
-  animation-timeline: scroll();
-  transform-origin: 0%;
-}
-
-@keyframes google-logo {
-  0% {
-    filter: hue-rotate(0deg);
-  }
-  50% {
-    filter: hue-rotate(360deg);
-  }
-  100% {
-    filter: hue-rotate(0deg);
-  }
 }
