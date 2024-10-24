@@ -10,15 +10,11 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
   font-family: "Mulish", sans-serif;
-}
-
-.text-google {
-  animation: google-animation 3s linear infinite;
 }
 
 .home {
