@@ -1,683 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Google</title>
 
-    <!-- Logo Website -->
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://cdn-icons-png.flaticon.com/128/2875/2875331.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PT Bumi Dinamis Sejahtera</title>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- LOGO WEB -->
+  <link rel="shortcut icon" type="image/x-icon" href="img/logo-bumi-dinamis.png" />
 
-    <!-- CSS Lokal -->
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
 
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
+  <!-- TAILWIND CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <body id="Beranda" class="bg-white text-gray-900 min-h-screen w-full">
-    <!-- NAVBAR START -->
-    <nav
-      class="navbar w-full bg-white/70 backdrop-blur-3xl fixed top-0 left-0 z-40 border-b border-gray-200 px-8"
-    >
-      <div
-        class="container mx-auto py-6 px-3 flex gap-4 justify-between items-center"
-      >
-        <a href="/" class="flex items-center gap-4">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/2702/2702602.png"
-            alt="logo"
-            class="w-8 h-8"
-            data-aos="zoom-in-right"
-            data-aos-offset="500"
-            data-aos-duration="3000"
-          />
-          <h1
-            data-aos="fade-right"
-            data-aos-duration="2000"
-            class="font-semibold font-sans text-2xl"
-          >
-            Google
-          </h1>
-        </a>
+  <!-- FEATHER ICONS -->
+  <script src="https://unpkg.com/feather-icons"></script>
 
-        <div class="hidden md:flex items-center gap-14 text-black text-xl pt-1">
-          <!-- Tambahkan margin di sini agar tidak terlalu rapat -->
-          <a
-            href="/"
-            data-aos="fade-left"
-            data-aos-duration="500"
-            class="flex flex-col group"
-          >
-            <p>Home</p>
-            <span
-              class="transition-all duration-500 h-[1px] w-0 group-hover:w-[80%] group-hover:bg-blue-600 rounded-full"
-            ></span>
-          </a>
-          <a
-            href="#Tentang"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            class="flex flex-col group"
-          >
-            <p>Tentang</p>
-            <span
-              class="transition-all duration-500 h-[1px] w-0 group-hover:w-[80%] group-hover:bg-red-600 rounded-full"
-            ></span>
-          </a>
-          <a
-            href="#Sejarah"
-            data-aos="fade-left"
-            data-aos-duration="2000"
-            class="flex flex-col group"
-          >
-            <p>Sejarah</p>
-            <span
-              class="transition-all duration-500 h-[1px] w-0 group-hover:w-[80%] group-hover:bg-orange-500 rounded-full"
-            ></span>
-          </a>
-          <a
-            href="#Kontak"
-            data-aos="fade-left"
-            data-aos-duration="3000"
-            class="flex flex-col group"
-          >
-            <p>Kontak</p>
-            <span
-              class="transition-all duration-500 h-[1px] w-0 group-hover:w-[80%] group-hover:bg-green-600 rounded-full"
-            ></span>
-          </a>
-        </div>
+  <!-- SWIPER JS -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        <button
-          onclick="hamburgerButton()"
-          class="md:hidden block"
-        >
-          <img src="icon/hamburger.png" alt="hamburger icon" class="w-8 h-8" />
-        </button>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
 
-        <div
-          id="hamburgerMenu"
-          class="hidden md:hidden flex-col fixed min-h-screen w-full top-0 left-0 bg-gray-50 z-40 px-8 overflow-hidden"
-        >
-          <!-- Tambahkan padding yang lebih besar di sini -->
-          <div class="container mx-auto py-6 px-3 flex justify-end">
-            <button onclick="hamburgerButton()" class="block">
-              <img src="icon/cross.png" alt="close icon" class="w-8 h-8" />
-            </button>
-          </div>
-
-          <!-- LOGO START -->
-          <div
-            class="font-bold text-[5rem] lg:text-[10rem] flex justify-center"
-          >
-            <h1 class="text-blue-500">G</h1>
-            <h1 class="text-red-500">o</h1>
-            <h1 class="text-yellow-500">o</h1>
-            <h1 class="text-blue-500">g</h1>
-            <h1 class="text-green-500">l</h1>
-            <h1 class="text-red-500">e</h1>
-          </div>
-          <!-- LOGO END -->
-
-          <hr
-            class="w-full border-0 rounded-full h-1 bg-gradient-to-r from-blue-500 to-red-500"
-          />
-
-          <div
-            class="flex flex-col mt-8 text-black font-bold text-3xl pt-1 space-y-8 uppercase"
-          >
-            <a
-              href="/"
-              onclick="hamburgerButton()"
-              class="p-4 bg-blue-200 hover:bg-blue-500 hover:text-white transition-all duration-300 rounded-lg"
-              >Home</a
-            >
-            <a
-              href="#Tentang"
-              onclick="hamburgerButton()"
-              class="p-4 bg-red-200 hover:bg-red-500 hover:text-white transition-all duration-300 rounded-lg"
-              >Tentang</a
-            >
-            <a
-              href="#Sejarah"
-              onclick="hamburgerButton()"
-              class="p-4 bg-orange-200 hover:bg-orange-500 hover:text-white transition-all duration-300 rounded-lg"
-              >Sejarah</a
-            >
-            <a
-              href="#Kontak"
-              onclick="hamburgerButton()"
-              class="p-4 bg-green-200 hover:bg-green-500 hover:text-white transition-all duration-300 rounded-lg"
-              >Kontak</a
-            >
-          </div>
-        </div>
+<body>
+  <nav class="border-b-2">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <a href="/" class="flex items-center">
+        <img src="img/logo-bumi-dinamis.png" alt="logo" class="w-18 h-12 -ml-4 -mt-2 md:-mt-1" />
+        <h1 class="font-extrabold md:text-xl">
+          <span class="text-blue-700">Bumi</span>
+          <span class="text-green-700">Dinamis</span>
+          <span class="text-gray-600">Sejahtera</span>
+        </h1>
+      </a>
+      <div class="hidden lg:flex gap-8 font-semibold tracking-wide text-lg">
+        <a href="/"
+          class="cursor-pointer hover:text-blue-600 transition-all duration-300 py-2 px-4 border-b-2 hover:border-blue-500/30 border-transparent">Home</a>
+        <a href="/tentang.html"
+          class="cursor-pointer hover:text-blue-600 transition-all duration-300 py-2 px-4 border-b-2 hover:border-blue-500/30 border-transparent">Tentang</a>
+        <a href="#layanan"
+          class="cursor-pointer hover:text-blue-600 transition-all duration-300 py-2 px-4 border-b-2 hover:border-blue-500/30 border-transparent">Layanan</a>
+        <a href="#"
+          class="cursor-pointer hover:text-blue-600 transition-all duration-300 py-2 px-4 border-b-2 hover:border-blue-500/30 border-transparent">Kontak</a>
       </div>
-    </nav>
-    <!-- NAVBAR END -->
 
-    <!-- HOME START -->
-    <main class="home">
-      <section class="bg-white/90">
-        <div
-          class="container mx-auto min-h-screen flex flex-col justify-center py-8 px-4"
-        >
-          <div class="py-2 flex flex-col items-center">
-            <!-- TEXT ANIMATION START -->
-            <div class="font-bold text-[6rem] lg:text-[10rem] flex">
-              <h1
-                data-aos="fade-left"
-                data-aos-duration="2000"
-                class="text-blue-500"
-              >
-                G
-              </h1>
-              <h1
-                data-aos="fade-down"
-                data-aos-duration="2000"
-                class="text-red-500"
-              >
-                o
-              </h1>
-              <h1
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                class="text-yellow-500"
-              >
-                o
-              </h1>
-              <h1
-                data-aos="fade-right"
-                data-aos-duration="2000"
-                class="text-blue-500"
-              >
-                g
-              </h1>
-              <h1
-                data-aos="fade-left"
-                data-aos-duration="2000"
-                class="text-green-500"
-              >
-                l
-              </h1>
-              <h1
-                data-aos="fade-down"
-                data-aos-duration="2000"
-                class="text-red-500"
-              >
-                e
-              </h1>
+      <button onclick="hamburgerButton()" class="lg:hidden block">
+        <img src="icon/hamburger.png" alt="hamburger icon" class="w-8 h-8" />
+      </button>
+    </div>
+  </nav>
+
+  <!-- NAVBAR MOBILE START -->
+  <div id="hamburgerMenu" class="hidden lg:hidden flex-col w-full bg-gray-50 border-b-2">
+    <div class="flex flex-col text-black font-semibold text-lg space-y-2 container mx-auto px-8 py-4">
+      <a href="/" onclick="hamburgerButton()"
+        class="self-start transition-all duration-300 border-b-2 border-transparent hover:border-blue-400/80 hover:text-blue-600">Home</a>
+      <a href="/tentang.html" onclick="hamburgerButton()"
+        class="self-start transition-all duration-300 border-b-2 border-transparent hover:border-blue-400/80 hover:text-blue-600">Tentang</a>
+      <a href="#layanan" onclick="hamburgerButton()"
+        class="self-start transition-all duration-300 border-b-2 border-transparent hover:border-blue-400/80 hover:text-blue-600">Layanan</a>
+      <a href="/" onclick="hamburgerButton()"
+        class="self-start transition-all duration-300 border-b-2 border-transparent hover:border-blue-400/80 hover:text-blue-600">Kontak</a>
+    </div>
+  </div>
+  <!-- NAVBAR MOBILE END -->
+
+  <main>
+    <section class="tentang-background">
+      <!-- CAROUSEL START -->
+      <!-- <div class="w-full relative">
+          <div class="swiper default-carousel swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center"
+                >
+                  <span class="w-full h-full">
+                    <img
+                      src="https://mediaindonesia.com/cdn-cgi/image/width=1200,quality=80,format=webp/https://asset.mediaindonesia.com/news/2024/05/ff605d3a4ea5325226c1310493d94cab.jpg"
+                      alt=""
+                      class="w-full h-full object-cover"
+                    />
+                  </span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center"
+                >
+                  <span class="w-full h-full">
+                    <img
+                      src="https://i2.wp.com/blog.tripcetera.com/id/wp-content/uploads/2020/10/pulau-padar.jpg"
+                      alt=""
+                      class="w-full h-full object-cover"
+                    />
+                  </span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center"
+                >
+                  <span class="w-full h-full">
+                    <img
+                      src="https://images.pexels.com/photos/2174974/pexels-photo-2174974.jpeg?cs=srgb&dl=pexels-quang-nguyen-vinh-222549-2174974.jpg&fm=jpg"
+                      alt=""
+                      class="w-full h-full object-cover"
+                    />
+                  </span>
+                </div>
+              </div>
             </div>
-            <!-- TEXT ANIMATION END -->
+            <div
+              class="flex items-center gap-8 lg:justify-start justify-center"
+            >
+              <button
+                id="slider-button-left"
+                class="swiper-button-prev group !p-2 flex justify-center items-center !w-12 !h-12 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !left-5"
+                data-carousel-prev
+              ></button>
+              <button
+                id="slider-button-right"
+                class="swiper-button-next group !p-2 flex justify-center items-center !w-12 !h-12 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !right-5"
+                data-carousel-next
+              ></button>
+            </div>
+          </div>
+        </div> -->
+      <!-- CAROUSEL END -->
 
-            <h1
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              class="font-bold text-4xl lg:text-5xl my-4"
-            >
-              <span class="text-blue-600">Company</span>
-              <span class="text-red-600">Profile</span>
-            </h1>
-            <p
-              data-aos="fade-down"
-              data-aos-duration="2000"
-              class="capitalize my-2 font-semibold tracking-wide text-center text-sm lg:text-lg"
-            >
-              <span class="text-red-600 font-bold">Berkomitmen </span>
-              <span class="text-blue-600 font-bold">meningkatkan</span> kualitas
-              hidup
-              <span class="text-green-700 font-bold">sebanyak</span> mungkin
-              <span class="text-orange-600 font-bold">orang</span> secara
-              <span class="text-blue-600 font-bold">signifikan</span>.
-              <br />
-              <span class="text-orange-600 font-bold">Saling</span>
-              <span class="text-green-700 font-bold">membantu</span> dengan
-              <span class="text-red-600 font-bold">memanfaatkan</span>
-              <span class="text-blue-600 font-bold">teknologi</span>.
+      <div id="tentang" class="bg-white/90 backdrop-blur-sm pb-8 lg:pb-24 min-h-[90vh] flex flex-col justify-center">
+        <div class="container mx-auto px-4 py-8 flex flex-col lg:flex-row items-center gap-4 text-center">
+          <div class="space-y-4 lg:space-y-8 text-center flex flex-col items-center justify-center w-full">
+            <div class="">
+              <h1
+                class="oxanium font-extrabold text-[5rem] lg:text-[10rem] flex items-center gap-2 lg:gap-4 justify-center tracking-wider">
+                <span data-aos="fade-left" data-aos-duration="3000" class="text-blue-600">B</span>
+                <span data-aos="zoom-in" data-aos-duration="2000" class="text-green-600">D</span>
+                <span data-aos="fade-right" data-aos-duration="3000" class="text-gray-600">S</span>
+              </h1>
+              <h3
+                class="oxanium font-extrabold text-2xl lg:text-4xl flex items-center gap-2 lg:gap-4 lg:-mt-8 justify-center tracking-wider">
+                <span data-aos="fade-left" data-aos-duration="3000" class="text-blue-600">Bumi</span>
+                <span data-aos="zoom-in" data-aos-duration="2000" class="text-green-600">Dinamis</span>
+                <span data-aos="fade-right" data-aos-duration="3000" class="text-gray-600">Sejahtera</span>
+              </h3>
+            </div>
+            <p data-aos="fade-up" data-aos-duration="3000"
+              class="lg:text-xl font-semibold tracking-wider flex flex-col">
+              <span>
+                PT.
+                <span class="text-blue-600 font-extrabold"> Bumi </span>
+                <span class="text-green-600 font-extrabold"> Dinamis </span>
+                <span class="text-gray-600 font-extrabold"> Sejahtera </span>
+                berkomitmen untuk menjaga lingkungan dari seluruh
+              </span>
+              <span>
+                permasalahan di perumahaan ataupun perusahaan seluruh
+                Indonesia
+              </span>
             </p>
-            <a
-              data-aos="zoom-in"
-              data-aos-duration="2000"
-              href="#Tentang"
-              class="mt-2 bg-blue-600 text-white font-bold text-base lg:text-lg tracking-wider py-2 lg:py-3 px-6 lg:px-10 rounded-md transition-all duration-300 hover:bg-transparent border-2 border-blue-600 hover:text-blue-600"
-              >Yuk Kita Mengenal Google</a
-            >
-          </div>
-        </div>
-      </section>
-    </main>
 
-    <span id="Tentang" class="py-10 text-transparent -ml-48">Tentang</span>
-
-    <section class="container mx-auto py-12 px-8">
-      <h1
-        data-aos="fade-right"
-        data-aos-duration="2000"
-        class="text-black font-bold text-5xl my-4"
-      >
-        <span class="text-red-600">Apa itu</span> Google?
-      </h1>
-      <hr
-        data-aos="zoom-in-right"
-        data-aos-duration="3000"
-        class="h-[4px] mb-8 w-[40%] bg-gradient-to-r from-blue-600 to-red-600"
-      />
-
-      <div class="flex flex-col lg:flex-row justify-between gap-16">
-        <div
-          data-aos="fade-left"
-          data-aos-duration="2000"
-          class="w-full text-justify text-lg space-y-4"
-        >
-          <p>
-            Google LLC adalah sebuah perusahaan multinasional Amerika Serikat
-            yang berkekhususan pada jasa dan produk Internet. Produk-produk
-            tersebut meliputi teknologi pencarian, komputasi web, perangkat
-            lunak, dan periklanan daring. Sebagian besar labanya berasal dari
-            AdWords.
-          </p>
-
-          <p>
-            Google didirikan oleh Larry Page dan Sergey Brin saat masih
-            mahasiswa Ph.D. di Universitas Stanford. Mereka berdua memegang 16
-            persen saham perusahaan. Mereka menjadikan Google sebagai perusahaan
-            swasta pada tanggal 4 September 1998. Pernyataan misinya adalah
-            "mengumpulkan informasi dunia dan membuatnya dapat diakses dan
-            bermanfaat oleh semua orang", dan slogan tidak resminya adalah
-            "Don't be evil".
-          </p>
-          <p>
-            Pada tahun 2006, kantor pusat Google pindah ke Mountain View,
-            California. Sejak didirikan, pertumbuhan perusahaan yang cepat telah
-            menghasilkan berbagai produk, akuisisi, dan kerja sama di bidang
-            mesin pencari inti Google. Perusahaan ini menawarkan perangkat lunak
-            produktivitas daring (dalam jaringan), termasuk surat elektronik
-            (surel), paket aplikasi perkantoran, dan jejaring sosial.
-            Produk-produk komputer mejanya meliputi aplikasi untuk menjelajah
-            web, mengatur dan menyunting foto, dan pesan instan. Perusahaan ini
-            memprakarsai pengembangan sistem operasi Android untuk telepon
-            genggam dan Google Chrome OS untuk jajaran netbook Chromebook.
-            Google sudah beralih ke perangkat keras komunikasi.
-          </p>
-          <p>
-            Mereka bekerja sama dengan berbagai produsen elektronik besar untuk
-            memproduksi perangkat Nexus-nya dan mengakuisisi Motorola Mobility
-            pada Mei 2012. Tahun 2012, infrastruktur serat optik dipasang di
-            Kansas untuk memfasilitasi layanan Internet pita lebar Google Fiber.
-          </p>
-        </div>
-        <div class="w-full rounded-xl flex flex-col gap-4">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Googleplex_HQ_%28cropped%29.jpg/800px-Googleplex_HQ_%28cropped%29.jpg"
-            alt=""
-            class="w-full rounded-xl"
-            data-aos="zoom-in-left"
-            data-aos-duration="2000"
-          />
-          <h3
-            class="font-semibold text-2xl my-4"
-            data-aos="fade-left"
-            data-aos-duration="500"
-          >
-            Misi <span class="text-blue-600">G</span
-            ><span class="text-red-600">o</span
-            ><span class="text-yellow-600">o</span
-            ><span class="text-blue-600">g</span
-            ><span class="text-green-600">l</span
-            ><span class="text-red-600">e</span> adalah
-            <span class="text-blue-600">mengelola</span> informasi
-            <span class="text-red-600">dunia</span> serta membuatnya
-            <span class="text-green-600">berguna</span> dan
-            <span class="text-orange-600">dapat diakses semua orang</span>.
-          </h3>
-          <div class="flex items-center">
-            <a
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              href="https://www.youtube.com/embed/3KtWfp0UopM?controls=0&autoplay=1&loop=1&playlist=3KtWfp0UopM"
-              class="py-3 px-6 bg-red-600 text-white transition-all duration-300 hover:bg-red-500 rounded-lg flex items-center gap-2 text-lg"
-              target="_blank"
-              rel="noopener"
-            >
-              <p class="text-xl font-bold tracking-wide">
-                Lihat Video Cerita Google
-              </p>
-              <img
-                src="https://img.icons8.com/?size=100&id=53222&format=png&color=FFFFFF"
-                alt=""
-                class="w-8 h-8"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <span id="Sejarah" class="py-10 text-transparent -ml-48">Sejarah</span>
-
-    <section class="bg-gray-100">
-      <div class="container mx-auto py-12 px-8">
-        <h1
-          data-aos="fade-right"
-          data-aos-duration="2000"
-          class="text-black font-bold text-5xl my-4"
-        >
-          <span class="text-orange-600">Sejarah</span> Google
-        </h1>
-        <hr
-          data-aos="zoom-in-right"
-          data-aos-duration="3000"
-          class="h-[4px] mb-8 w-[40%] bg-gradient-to-r from-blue-600 to-red-600"
-        />
-
-        <div class="">
-          <div class="flex flex-col lg:flex-row gap-8">
-            <div
-              data-aos="fade-left"
-              data-aos-duration="2000"
-              class="w-full lg:w-[50%] h-auto rounded-lg"
-            >
-              <img
-                src="https://lh3.googleusercontent.com/WYO6aJkpnUfEowFgIrmMXGEZrATN4l341NH1YSaSD07H4j4NZ37TLKlFtz3cZPkchRKrqBlnc_gHDnLxPJGjINkB6KDGbssjZGx5=w1024-h378-l80-sg-rj-c0xffffff"
-                alt="Sejarah Foto"
-                class="w-full h-full object-cover rounded-lg border border-black"
-              />
-            </div>
-            <div class="grid grid-cols-2 gap-4 text-white">
-              <div
-                data-aos="fade-up-left"
-                data-aos-duration="1000"
-                class="bg-blue-600 p-4 rounded-lg"
-              >
-                <h4 class="text-xl font-bold pb-1">Didirikan</h4>
-                <hr class="w-1/2" />
-                <p class="mt-2">1998</p>
-              </div>
-              <div
-                data-aos="fade-up-right"
-                data-aos-duration="1300"
-                class="bg-red-600 p-4 rounded-lg"
-              >
-                <h4 class="text-xl font-bold pb-1">Pendiri</h4>
-                <hr class="w-1/2" />
-                <p class="mt-2">Larry Page dan Sergey Brin</p>
-              </div>
-              <div
-                data-aos="fade-down-left"
-                data-aos-duration="1600"
-                class="bg-orange-600 p-4 rounded-lg"
-              >
-                <h4 class="text-xl font-bold pb-1">Pendirian Usaha</h4>
-                <hr class="w-1/2" />
-                <p class="mt-2">4 September 1998</p>
-              </div>
-              <div
-                data-aos="fade-down-right"
-                data-aos-duration="1900"
-                class="bg-green-600 p-4 rounded-lg"
-              >
-                <h4 class="text-xl font-bold pb-1">
-                  Penawaran Umum Saham Perdana
-                </h4>
-                <hr class="w-1/2" />
-                <p class="mt-2">19 Agustus 2004</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-10 space-y-8">
-            <h3
-              data-aos="fade-left"
-              data-aos-duration="500"
-              class="font-semibold text-4xl"
-            >
-              Berawal dari
-              <span class="text-red-600 font-bold">garasi</span> hingga ke
-              <span class="text-blue-600 font-bold">Googleplex</span>
-            </h3>
-            <h4
-              data-aos="fade-right"
-              data-aos-duration="500"
-              class="font-semibold text-2xl"
-            >
-              Kisah Google dimulai pada tahun 1995 di Universitas Stanford. Saat
-              itu, Larry Page sedang mempertimbangkan untuk melanjutkan studinya
-              ke jenjang pascasarjana di Stanford, dan Sergey Brin, seorang
-              mahasiswa di sana, diminta untuk mengajaknya berkeliling.
-            </h4>
-            <div class="space-y-4 text-xl text-justify">
-              <p data-aos="fade-left" data-aos-duration="500">
-                Menurut sebagian orang, pada saat itu mereka tidak sepemikiran
-                hampir dalam segala hal, tetapi setahun kemudian mereka menjadi
-                sahabat dekat. Dari kamar asrama, mereka membuat mesin telusur
-                yang menggunakan link untuk menentukan peringkat setiap halaman
-                di internet; yang dulu disebut World Wide Web. Mereka menamai
-                mesin telusur ini Backrub.
-              </p>
-
-              <p data-aos="fade-left" data-aos-duration="500">
-                Tidak lama kemudian, nama Backrub diganti menjadi Google
-                (syukurlah). Nama Google merupakan pelesetan dari istilah
-                ekspresi matematika untuk angka 1 yang diikuti oleh 100 angka
-                nol, yang sangat mencerminkan misi Larry dan Sergey yakni
-                “mengelola informasi dunia serta membuatnya berguna dan dapat
-                diakses semua orang”.
-              </p>
-              <p data-aos="fade-left" data-aos-duration="500">
-                Selama beberapa tahun berikutnya, Google tidak hanya menarik
-                perhatian komunitas akademis tetapi juga para investor Silicon
-                Valley. Pada Agustus 1998, co-founder Sun, Andy Bechtolsheim,
-                memberikan cek senilai $100.000 kepada Larry dan Sergey. Pada
-                saat itulah Google LLC didirikan secara resmi. Dengan investasi
-                ini, tim yang baru terbentuk itu mulai melakukan upgrade dengan
-                pindah dari kamar asrama ke kantor pertamanya: sebuah garasi di
-                daerah pinggiran kota Menlo Park, California, milik Susan
-                Wojcicki (karyawan ke-16 dan mantan CEO YouTube). Beberapa
-                komputer desktop kuno, sebuah meja ping-pong, dan karpet
-                berwarna biru terang menjadi pemandangan sehari-hari pada saat
-                itu. (Tradisi untuk menjadikan segala sesuatu penuh warna
-                berlanjut hingga saat ini.)
-              </p>
-              <p data-aos="fade-left" data-aos-duration="500">
-                Bahkan di masa-masa awal, ada banyak hal yang tidak biasa dari
-                perusahaan ini: mulai dari server pertama Google (yang terbuat
-                dari Lego) hingga gambar “Doodle” pertama pada 1998: yakni
-                gambar orang-orangan yang terselip di antara logo Google, yang
-                secara tidak langsung memberi tahu pengunjung situs bahwa
-                seluruh staf sedang mengikuti Festival Burning Man. Slogan
-                “Don't be evil” (jangan berbuat jahat) menggambarkan keinginan
-                kami untuk menggunakan metode yang berbeda. Beberapa tahun
-                berikutnya, perusahaan ini berkembang sangat cepat — merekrut
-                engineer, membentuk tim penjualan, dan memperkenalkan anjing
-                perusahaan pertamanya, Yoshka. Karena telah berkembang jauh
-                lebih besar, Google akhirnya harus berpindah dari ruang garasi
-                menuju kantor pusatnya saat ini (“Googleplex”) di Mountain View,
-                California. Keinginan untuk melakukan sesuatu dengan cara yang
-                berbeda menjadi penggerak kami. Begitu juga Yoshka.
-              </p>
-              <p data-aos="fade-left" data-aos-duration="500">
-                Terus-menerus mencari solusi yang lebih baik telah menjadi inti
-                segala hal yang kami lakukan. Saat ini, Google telah membuat
-                ratusan produk yang digunakan miliaran orang di seluruh dunia,
-                mulai dari YouTube dan Android, hingga Gmail dan, tentu saja,
-                Google Penelusuran. Walau sekarang kami sudah tidak menggunakan
-                server dari Lego dan kini kami punya beberapa anjing perusahaan,
-                semangat untuk membangun teknologi bagi semua orang tetap ada
-                bersama kami — mulai dari awal hingga detik ini.
-              </p>
+            <div data-aos="fade-down" data-aos-duration="2000" class="flex gap-4 justify-center">
+              <a href="#layanan" data-aos="fade-left" data-aos-duration="3000"
+                class="flex items-center gap-2 py-2 px-4 bg-blue-600 text-white rounded font-semibold lg:text-xl hover:bg-blue-500">
+                <i data-feather="briefcase"></i>
+                Layanan Kami
+              </a>
+              <a href="#" data-aos="fade-right" data-aos-duration="3000"
+                class="flex items-center gap-2 py-2 px-4 bg-green-600 text-white rounded font-semibold lg:text-xl hover:bg-green-500">
+                <i data-feather="phone"></i>
+                Hubungi
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <span id="Kontak" class="py-10 text-transparent -ml-48">Kontak</span>
-
-    <!-- CONTACT START -->
-    <section>
-      <main class="container mx-auto px-8 pt-12 pb-28">
-        <h1
-          data-aos="fade-right"
-          data-aos-duration="2000"
-          class="text-black font-bold text-5xl my-4"
-        >
-          <span class="text-green-700">Kontak</span> Google
+    <!-- Hero Section -->
+    <section class="bg-blue-600 text-white py-12">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+          Membangun Negeri dengan Wawasan Lingkungan
         </h1>
-        <hr
-          data-aos="zoom-in-right"
-          data-aos-duration="3000"
-          class="h-[4px] mb-8 w-[40%] bg-gradient-to-r from-blue-600 to-red-600"
-        />
-
-        <div class="flex flex-wrap -mx-4">
-          <div class="w-full lg:w-2/3 px-4 mb-8 lg:mb-0">
-            <div
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              class="bg-white p-8 shadow-xl border border-gray-300 rounded-lg"
-            >
-              <h2 class="text-2xl font-bold mb-6">Get in Touch</h2>
-
-              <form
-                id="contact-form"
-                method="POST"
-                action="https://formspree.io/f/mpwawvaw"
-              >
-                <div class="mb-4">
-                  <label
-                    for="nama"
-                    class="block text-gray-700 font-semibold mb-2"
-                    >Name</label
-                  >
-                  <input
-                    type="text"
-                    id="nama"
-                    name="from_name"
-                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                    required
-                  />
-                </div>
-                <div class="mb-4">
-                  <label
-                    for="email"
-                    class="block text-gray-700 font-semibold mb-2"
-                    >Email</label
-                  >
-                  <input
-                    type="email"
-                    id="email"
-                    name="reply_to"
-                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                    required
-                  />
-                </div>
-                <div class="mb-4">
-                  <label
-                    for="message"
-                    class="block text-gray-700 font-semibold mb-2"
-                    >Message</label
-                  >
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="4"
-                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                    required
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  class="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
-
-          <div class="w-full lg:w-1/3 px-4">
-            <div
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              class="bg-white p-8 shadow-lg border border-gray-300 rounded-lg"
-            >
-              <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
-              <p class="text-gray-700 mb-4">
-                Feel free to reach out to us at any time. We're here to help!
-              </p>
-              <p class="flex items-start mb-2">
-                <svg
-                  class="w-7 h-7 text-green-600 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5z"
-                  />
-                </svg>
-                1600 Amphitheatre Parkway, Mountain View, CA 94043
-              </p>
-              <p class="flex items-center mb-2">
-                <svg
-                  class="w-5 h-5 text-green-600 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5z"
-                  />
-                </svg>
-                info@google.com
-              </p>
-              <p class="flex items-center mb-2">
-                <svg
-                  class="w-5 h-5 text-green-600 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5z"
-                  />
-                </svg>
-                +1 650-253-0000
-              </p>
-            </div>
-          </div>
-        </div>
-      </main>
-    </section>
-    <!-- CONTACT END -->
-
-    <!-- FOOTER START -->
-    <footer class="bg-gradient-to-r from-blue-700 to-red-700 text-white py-6">
-      <div class="container mx-auto text-center text-xl font-bold">
-        <p class="flex text-center justify-center">
-          &copy; 2024 Google Inc &<a
-            href="https://rozan-nouval.vercel.app"
-            target="_blank"
-            rel="noopener"
-            class="underline mx-1"
-          >
-            Rozan Nouval </a
-          >. All rights reserved.
+        <p class="md:text-lg font-semibold tracking-wider mb-8">
+          PT Bumi Dinamis Sejahtera berkomitmen menjaga lingkungan di seluruh
+          Indonesia
         </p>
+        <a href="#layanan"
+          class="bg-white text-blue-600 py-3 px-8 rounded-full font-semibold hover:bg-gray-100 transition">Pelajari
+          Lebih Lanjut</a>
       </div>
-    </footer>
-    <!-- FOOTER END -->
+    </section>
 
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script src="script.js"></script>
-  </body>
+    <!-- Visi dan Misi Section -->
+    <section class="bg-gray-100 py-16">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col justify-center items-center gap-4 lg:gap-4 mb-12">
+          <h1 data-aos="zoom-in" data-aos-duration="2000" class="text-center font-bold text-2xl lg:text-4xl">
+            <span class="text-blue-600 font-extrabold">Visi & Misi</span> Kami
+          </h1>
+          <hr class="border border-blue-600 w-1/2" />
+          <p data-aos="zoom-in-down" data-aos-duration="2000"
+            class="lg:text-lg text-sm tracking-wider text-center text-gray-600/80 font-semibold">
+            Menjaga lingkungan dan properti Anda dengan layanan profesional.
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-8">
+          <!-- Visi Section -->
+          <div data-aos="zoom-in-right" data-aos-duration="2000"
+            class="lg:w-1/3 bg-white shadow-lg rounded-lg p-8 transition-all hover:scale-105">
+            <div class="flex items-center space-x-4 mb-6">
+              <div class="text-blue-500 bg-blue-100 p-3 rounded-full">
+                <i data-feather="eye"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-800">Visi Kami</h3>
+            </div>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Menjadi pemimpin di bidang pengendalian hama dan manajemen
+              lingkungan dengan menyediakan layanan berkelanjutan dan inovatif
+              untuk menjaga kualitas hidup masyarakat dan kelestarian
+              lingkungan.
+            </p>
+          </div>
+
+          <!-- Misi Section -->
+          <div data-aos="zoom-in-right" data-aos-duration="2000" class="lg:w-2/3 bg-white shadow-lg rounded-lg p-8">
+            <div class="flex items-center space-x-4 mb-6">
+              <div class="text-green-500 bg-green-100 p-3 rounded-full">
+                <i data-feather="target"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-800">Misi Kami</h3>
+            </div>
+            <ul class="text-gray-600 text-lg leading-relaxed list-disc list-inside space-y-3">
+              <li>
+                Menyediakan solusi pengendalian hama yang inovatif dan efektif
+                tanpa mengganggu keseimbangan ekosistem.
+              </li>
+              <li>
+                Menjaga standar tinggi dalam manajemen dan pemantauan kualitas
+                lingkungan untuk perusahaan dan industri.
+              </li>
+              <li>
+                Mengembangkan layanan pengelolaan lingkungan yang sesuai
+                dengan kebutuhan klien dan aturan hukum yang berlaku.
+              </li>
+              <li>
+                Memberikan edukasi kepada masyarakat dan industri mengenai
+                pentingnya menjaga lingkungan hidup yang sehat dan aman.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 bg-green-600 text-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+          Butuh Layanan Kami?
+        </h2>
+        <p class="text-base md:text-lg font-semibold md:tracking-wider mb-8">
+          Hubungi kami untuk konsultasi lebih lanjut mengenai kebutuhan
+          lingkungan dan properti Anda.
+        </p>
+        <a href="#kontak"
+          class="bg-white text-green-600 py-3 px-8 rounded-full font-semibold hover:bg-gray-100 transition">Kontak
+          Kami</a>
+      </div>
+    </section>
+
+    <!-- LAYANAN START -->
+    <section id="layanan" class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4 lg:px-12">
+        <div class="flex flex-col justify-center items-center gap-4 lg:gap-4">
+          <h1 data-aos="zoom-in" data-aos-duration="2000" class="text-center font-bold text-2xl lg:text-4xl">
+            <span class="text-green-600 font-extrabold">Layanan</span> Kami
+          </h1>
+          <hr class="border border-green-600 w-1/2" />
+          <p data-aos="zoom-in-down" data-aos-duration="2000"
+            class="lg:text-lg text-sm tracking-wider text-center text-gray-600/80 font-semibold">
+            Menjaga lingkungan dan properti Anda dengan layanan profesional.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-16 my-8 lg:my-12 text-center px-8 md:px-0">
+          <div data-aos="zoom-in" data-aos-duration="1500"
+            class="space-y-2 flex flex-col items-center bg-white p-6 rounded-lg border border-gray-500/50">
+            <i data-feather="settings" class="w-16 lg:w-18 h-16 lg:h-18 text-gray-800 mb-4"></i>
+            <h3 class="text-xl lg:text-xl font-semibold border-b-2 border-gray-500/50 w-full pb-4">
+              Pengendalian Hama
+            </h3>
+            <p class="text-sm lg:text-base">
+              Mengelola dan mengurangi populasi hama untuk melindungi
+              kesehatan dan properti Anda.
+            </p>
+          </div>
+
+          <div data-aos="zoom-in" data-aos-duration="2000"
+            class="space-y-2 flex flex-col items-center bg-white p-6 rounded-lg border border-gray-500/50">
+            <i data-feather="globe" class="w-16 lg:w-18 h-16 lg:h-18 text-gray-800 mb-4"></i>
+            <h3 class="text-xl lg:text-xl font-semibold border-b-2 border-gray-500/50 w-full pb-4">
+              Sertifikasi Fungsi Bangunan (SLF)
+            </h3>
+            <p class="text-sm lg:text-base">
+              Memastikan bangunan Anda layak fungsi dengan sertifikasi sesuai
+              standar.
+            </p>
+          </div>
+
+          <div data-aos="zoom-in" data-aos-duration="2500"
+            class="space-y-2 flex flex-col items-center bg-white p-6 rounded-lg border border-gray-500/50">
+            <i data-feather="eye" class="w-16 lg:w-18 h-16 lg:h-18 text-gray-800 mb-4"></i>
+            <h3 class="text-xl lg:text-xl font-semibold border-b-2 border-gray-500/50 w-full pb-4">
+              Penyusunan Dokumen Lingkungan
+            </h3>
+            <p class="text-sm lg:text-base">
+              Menyusun dokumen yang mematuhi regulasi untuk keberlanjutan
+              lingkungan.
+            </p>
+          </div>
+
+          <div data-aos="zoom-in" data-aos-duration="1500"
+            class="space-y-2 flex flex-col items-center bg-white p-6 rounded-lg border border-gray-500/50">
+            <i data-feather="file-text" class="w-16 lg:w-18 h-16 lg:h-18 text-gray-800 mb-4"></i>
+            <h3 class="text-xl lg:text-xl font-semibold border-b-2 border-gray-500/50 w-full pb-4">
+              Pemantauan Kualitas Lingkungan
+            </h3>
+            <p class="text-sm lg:text-base">
+              Memantau kualitas lingkungan untuk keberlanjutan ekosistem yang
+              sehat.
+            </p>
+          </div>
+
+          <div data-aos="zoom-in" data-aos-duration="2000"
+            class="space-y-2 flex flex-col items-center bg-white p-6 rounded-lg border border-gray-500/50">
+            <i data-feather="home" class="w-16 lg:w-18 h-16 lg:h-18 text-gray-800 mb-4"></i>
+            <h3 class="text-xl lg:text-xl font-semibold border-b-2 border-gray-500/50 w-full pb-4">
+              Pengelolaan Lingkungan Hidup
+            </h3>
+            <p class="text-sm lg:text-base">
+              Mengelola aspek lingkungan untuk memastikan aktivitas industri
+              ramah lingkungan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- LAYANAN END -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-10">
+    <div class="container mx-auto px-6">
+      <!-- Top Section with About, Quick Links, and Contact -->
+      <div class="flex flex-wrap justify-between">
+        <!-- About Section -->
+        <div class="w-full lg:w-2/4 mb-8 lg:mb-0">
+          <h3 class="text-2xl font-semibold text-white mb-4">
+            PT Bumi Dinamis Sejahtera
+          </h3>
+          <p class="text-gray-400 leading-relaxed">
+            Menyediakan layanan lingkungan berkelanjutan di bidang
+            pengendalian hama, manajemen lingkungan, dan kelayakan bangunan.
+            Kami berkomitmen untuk meningkatkan kualitas lingkungan demi masa
+            depan yang lebih baik.
+          </p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="w-full lg:w-1/4 mb-8 lg:mb-0">
+          <h3 class="text-2xl font-semibold text-white mb-4">Tautan Cepat</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="/" class="text-gray-400 hover:text-gray-100 transition">Home</a>
+            </li>
+            <li>
+              <a href="/tentang.html" class="text-gray-400 hover:text-gray-100 transition">About</a>
+            </li>
+            <li>
+              <a href="/layanan.html" class="text-gray-400 hover:text-gray-100 transition">Services</a>
+            </li>
+            <li>
+              <a href="/kontak.html" class="text-gray-400 hover:text-gray-100 transition">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="w-full lg:w-1/4">
+          <h3 class="text-2xl font-semibold text-white mb-2">Contact US</h3>
+          <div class="space-y-3 mt-4 mb-6">
+            <p class="text-gray-400 flex items-center gap-3">
+              <i data-feather="phone"></i> +62 123 4567 890
+            </p>
+            <p class="text-gray-400 flex items-center gap-3">
+              <i data-feather="mail"></i> info@bumidinamis.com
+            </p>
+            <p class="text-gray-400 flex items-center gap-3">
+              <i data-feather="map-pin"></i> Jl. Kebangkitan No. 23, Jakarta
+            </p>
+          </div>
+
+          <!-- Social Media Links -->
+          <div class="flex mt-4 space-x-4">
+            <a href="#" class="text-gray-400 hover:text-gray-100 transition"><i data-feather="facebook"></i></a>
+            <a href="#" class="text-gray-400 hover:text-gray-100 transition"><i data-feather="linkedin"></i></a>
+            <a href="#" class="text-gray-400 hover:text-gray-100 transition"><i data-feather="instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-gray-700 my-8"></div>
+
+      <!-- Bottom Section -->
+      <div class="flex flex-col lg:flex-row justify-between items-center">
+        <p class="text-gray-500">
+          &copy; 2024 PT Bumi Dinamis Sejahtera. Semua hak dilindungi
+          undang-undang.
+        </p>
+
+        <!-- Additional Links -->
+        <div class="mt-4 lg:mt-0 space-x-4">
+          <a class="text-gray-400 hover:text-gray-100 transition">Kebijakan Privasi</a>
+          <a class="text-gray-400 hover:text-gray-100 transition">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CAROUSEL JS CODE -->
+  <script>
+    var swiper = new Swiper(".default-carousel", {
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 3000,
+      },
+    });
+  </script>
+
+  <script>
+    // HANDLE HAMBURGER
+    const hamburgerButton = () => {
+      document.getElementById("hamburgerMenu").classList.toggle("hidden");
+    };
+  </script>
+
+  <!-- FEATHER ICONS -->
+  <script>
+    feather.replace();
+  </script>
+
+  <!-- AOS -->
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>
